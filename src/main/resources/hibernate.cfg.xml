@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/twitterX</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">$epehrroot</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">false</property>
+
+
+        <!-- Mapping files -->
+        <mapping class="org.example.User"/>
+        <mapping class="org.example.Post"/>
+        <mapping class="org.example.Tag"/>
+        <mapping class="org.example.Reaction"/>
+        <mapping class="org.example.SearchHistory"/>
+        <mapping class="org.example.Follow"/>
+    </session-factory>
+</hibernate-configuration>
